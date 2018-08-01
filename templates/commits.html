@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Commits on the Repo</title>
+</head>
+<body>
+    <h1>Commits to the repo:</h1>
+    <ul id="navigation">
+    {% for item in commits %}
+        <li>
+            <a href="{{ item.sha }}">{{ item.commit.message.split('\n')[0] }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
